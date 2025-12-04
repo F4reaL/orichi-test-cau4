@@ -1,4 +1,4 @@
-import { Page, Layout, BlockStack, Card, Button, Text, Form } from '@shopify/polaris';
+import { Page, Layout, BlockStack, Button, Text, Form } from '@shopify/polaris';
 import { useForm, useFieldArray } from 'react-hook-form';
 import GeneralInformation from './GeneralInformation';
 import VolumeDiscountOptions from './VolumeDiscountOptions';
@@ -52,7 +52,7 @@ export default function VolumeDiscountForm() {
   return (
     <Page>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-        <Button  icon={ArrowLeftIcon}></Button>
+        <Button icon={ArrowLeftIcon}></Button>
         <Text variant="headingLg" as="h1">Create volume discount</Text>
       </div>
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -61,9 +61,7 @@ export default function VolumeDiscountForm() {
             <BlockStack gap="500">
               <GeneralInformation control={control} errors={errors} />
               <VolumeDiscountOptions fields={fields} append={append} remove={remove} control={control} errors={errors} watch={watch} />
-              <Card>
-                <Button submit primary fullWidth size="large">Save</Button>
-              </Card>
+              <Button submit primary fullWidth size="large">Save</Button>
             </BlockStack>
           </Layout.Section>
 
